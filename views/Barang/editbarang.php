@@ -3,9 +3,9 @@ foreach ($data['brg']as $brg){
     
  ?>
 <caption><h1>Data Barang</h1></caption>
-<form action="<?= $base_url.'barang/update/'.$brg['idbarang']?>" method="post">
+<form action="<?= $base_url.'barang/ubah/'.$brg['idbarang']?>" method="post">
     <div>
-        <label for="">Id Barang</label>
+        <label for="">id Barang</label>
         <input type="text" name="idbarang" id="" value="<?= $brg['idbarang'] ?>" readonly>
     </div>
     <div>
@@ -45,8 +45,8 @@ foreach ($data['brg']as $brg){
          </select>
     </div>
     <div>
-        <button type="submit" name="simpan">Simpan</button>
-        <button type="reset"name="batal">batal</button>
+        <input type="submit" value="Simpan">
+        <input type="reset" value="Batal">
     </div>
 </form>
 <?php } ?>

@@ -1,5 +1,6 @@
 <div data-role="panel" data-title-caption="List Jenis" data-collapsible="true" data-title-icon= "<span class='mif-chart-line'></span>" class="mt-4">
 <table class="table row-hover">
+<a class="button success" href="<?= $base_url; ?>jenis/Add"><span class="mif-add"></span></a>
     <thead>
         <th>Nomor</th>
         <th>Jenis Barang</th>

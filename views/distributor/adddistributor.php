@@ -1,4 +1,4 @@
-<caption><h1> Data Distributor<h1></caption>
+<caption><h1> Data Distributor</h1></caption>
 <form action="<?= $base_url?>distributor/save" method="post">
     <label for="">Nama Distributor</label>
     <input type="text" name="nmdist" id=""required>

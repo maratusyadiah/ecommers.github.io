@@ -1,18 +1,18 @@
 <?php 
-foreach($data['jual'] as $jual){
-    if($jual>0){
+foreach($data['jual'] as $jual) {
+    if($jual >0) {
         $no=((int)$jual['kdjual'])+1;
         $kd=sprintf("%04s",$no);
-    }else{
+    } else {
         $kd="0001";
     }
     date_default_timezone_set('asia/jakarta');
-    $kodejual=date('mdy').$kd;
-    }
+    $kodejual= date("ymd").$kd;
+                         }
 ?>
 <script type="text/javascript">
     function startCalc(){
-        interval=setInterval("calc()",1);
+        interval=setInterval("calc()", 1);
         }
         function calc(){
             harga=document.jual.harga.value;
@@ -31,12 +31,12 @@ foreach($data['jual'] as $jual){
 <div>
     <form action="<?= $base_url?>jual/save" method="post" name="jual">
      <div>
-    <label for="">Id Jual</label>
+    <label for="">id Jual</label>
     <input type="text" name="idjual" id="" value="<?= $kodejual ?>" readonly>
         <div>
 </div>
 <label for="">Tanggal Transaksi</label>
-<input type="date" name="tgljual" placholder="yyyy-mm-dd" value="<?= date('d-m-yyyy')?>" readonly>
+<input type="date" name="tgljual" placholder="d-m-yyyy" value="<?= date("d-m-yyyy")?>" required>
 <div>
     <div>
         <div>

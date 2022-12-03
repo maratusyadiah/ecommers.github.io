@@ -1,5 +1,6 @@
 <div data-role="panel" data-title-caption="List Barang" data-collapsible="true" data-title-icon= "<span class='mif-chart-line'></span>" class="mt-4">
 <table class="table row-hover">
+<a class="button success" href="<?= $base_url; ?>barang/add"><span class="mif-add"></span></a>
     <thead>
         <th>Id Barang</th>
         <th>Nama Barang </th>
@@ -20,7 +21,7 @@
         <td><?= $barang['stok']?></td>
         <td><?= $barang['harga']?></td>
         <?php
-        if($barang['status']==1){
+        if($barang['status']=1){
             if($barang['stok']>=1){
             $status="Ready";
         }else{
@@ -30,9 +31,9 @@
     ?>
         <td><?= $status?></td>
         <td><?= $barang['nmdist']?></td>
-        <td><a class="button warning" href="<?= $base_url.'jual/add/'.$barang['idbarang']?>"><span class="mif-cart"></span></td>
+        <td><a class="button success" href="<?= $base_url.'jual/add/'.$barang['idbarang']?>"><span class="mif-cart"></span></td>
         <td><a class="button info" href="<?= $base_url.'barang/edit/'.$barang['idbarang']?>"><span class="mif-pencil"></span></td>
-        <td><a class="button alert"><span class="mif-bin"></span</td>
+        <td><a class="button alert" href="<?= $base_url.'barang/hapus/'.$barang['idbarang']?>" onclick="return confirm('Yakin dihapus?')"><span class="mif-bin"></span</td>
     </tbody>
     <?php } ?> 
 </table>

@@ -1,5 +1,6 @@
 <?php
 if($aksi=='index'){
+    $data['jual']=$db->query($connect," SELECT * FROM vjual");
     $helpers->template('jual/jual.php');
 }
 if($aksi=='add'){
@@ -20,6 +21,6 @@ if($aksi=='save'){
     if($simpan)
     header('location:'.$base_url.'jual');
     else{
-        header('location:'.$base_url.'jual/add');
+        header('location:'.$base_url.'jual/Add');
     }
 }
